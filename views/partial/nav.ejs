@@ -1,0 +1,81 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">pms</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger" class="btn-floating pulse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+        <!--
+      <li><a  class='dropdown-trigger btn' href='#' data-target='dropdown4'>Password Category</a>
+        <ul id='dropdown4' class='dropdown-content'>
+          <li><a href="/add-new-category">add new Category </a></li>
+          <li class="divider"></li>
+          <li><a href="/passwordCategory">all Category </a></li>
+        </ul></li>
+   
+        <li><a href="/passwordCategory">Password Category </a></li>
+      <li><a href="/add-new-category">add newPassword Category </a></li>
+    
+     
+        <li><a  class='dropdown-trigger btn' href='#' data-target='dropdown3'>password detail</a>
+        <ul id='dropdown3' class='dropdown-content'>
+          <li><a href="/add-new-password">add password</a></li>
+          <li class="divider"></li>
+      <li><a href="/view-all-password">view all password</a></li>
+          
+        </ul></li>
+  -->
+      <!--
+        <li><a href="/add-new-password">add-new-password</a></li>
+      <li><a href="/view-all-password">view all password</a></li>
+      -->
+      <%if(loginUser){%>
+        <li><a href="/dashboard" class="btn waves-effect waves-light"><i class="material-icons left">dashboard</i>dashboard</a></li>
+        <li><a href="#" class="btn waves-effect waves-light modal-trigger"><i class="material-icons left">account_circle</i><%=loginUser%></a></li>
+        <li><a href="/logout" class="btn waves-effect waves-light"><i class="material-icons left">arrow_forward</i>Logout</a></li>
+        <%}%>
+    </ul>
+    
+  </div>
+</nav>
+<div class="progress">
+  <div class="indeterminate"></div>
+</div>
+<ul class="sidenav" id="mobile-demo">
+  <%if(loginUser){%>
+    <li><%=loginUser%></li>
+    <li><a href="#" class="btn waves-effect waves-light modal-trigger"><i class="material-icons left">account_circle</i><%=loginUser%></a></li>
+    <li><a href="/logout" class="btn waves-effect waves-light"><i class="material-icons left">arrow_forward</i>Logout</a></li>
+    <%}%>
+  <li><a href="/dashboard" class=" btn waves-effect waves-light"><i class="material-icons left">dashboard</i>dashboard</a></li>
+  <!--
+  <li><a  class='dropdown-trigger btn' href='#' data-target='dropdown2'>Password Category 
+  </a>
+    <ul id='dropdown2' class='dropdown-content'>
+      <li><a href="/add-new-category">add new Category </a></li>
+      <li class="divider"></li>
+      <li><a href="/passwordCategory"> all Password Category </a></li>
+    </ul></li>
+ 
+     
+        <li><a href="/passwordCategory">Password Category </a></li>
+      <li><a href="/add-new-category">add newPassword Category </a></li>
+      -->
+<!--
+      <li><a  class='dropdown-trigger btn' href='#' data-target='dropdown1'>password detail</a>
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="/add-new-password">add new password</a></li>
+          <li class="divider"></li>
+          <li><a href="/view-all-password">view all password</a></li>
+        </ul></li>
+
+      
+        <li><a href="/add-new-password">add-new-password</a></li>
+      <li><a href="/view-all-password">view all password</a></li>
+     
+      <%if(loginUser){%>
+        <li><a href="#" class="btn">logged in as : <%=loginUser%></a></li>
+        <li><a href="/logout" class="btn">Logout</a></li>
+        <%}%>
+         -->
+</ul>
+
+

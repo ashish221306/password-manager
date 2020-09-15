@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+<meta content='HTML, CSS, JavaScript,web design, ashishtech' name='keywords'/>
+<meta content='Ashish Kumar' name='author'/>
+<meta content='password manager' property='og:title'/>
+<meta content='password manager | manage your passwords , save your passwords ,retrieve your passwords' property='og:description'/>
+
+<meta content='images/homelogo.svg' property='og:image'/>
+    
+    <%- include('partial/head')%>
+    <style>
+      html,body{height: 100%;}
+  body{background: linear-gradient(#ff512f, #DD2476);background-repeat: no-repeat;
+  background-position: center;height: 100%;overflow: hidden;}
+  h1{font-size: 25px;}
+  h1 {
+    
+  font-weight:700;
+  
+}
+
+.homeloginbutton{padding: 15px 40px;
+  margin: 10px;
+background: linear-gradient(red,purple);
+color: #f1f1f1;
+border-radius: 50px;
+text-decoration: none;
+border: 2px solid #ddd}
+
+    </style>
+    
+   
+  </head>
+  <body>
+    <!--nav-->
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">pms</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+        
+        <li><a href="/login" class="btn waves-effect waves-light">login</a></li>
+
+          </ul>
+          
+        </div>
+      </nav>
+      
+      <ul class="sidenav" id="mobile-demo">
+       
+        <li><a href="/login" class="btn waves-effect waves-light">login</a></li>
+      </ul>
+    <!--nav end-->
+    <div class="container-fluid">
+        <div style="height: 100px;"><h1 class="typing"></h1></div>
+        <div class="text-center">
+          <a href='/login' class="homeloginbutton  waves-effect waves-light">Login</a>
+        </div>
+      <div class="row">
+        <div class="col-md-6 col-xs-auto col-sm-auto ml-auto mr-auto">
+        <img class="img img-responsive" src="images/homelogo.svg" width="100%">
+        </div>
+        </div>
+      </div>
+    
+      <script src="javascripts/nav.js"></script>
+
+      
+      <script src="javascripts/typed.min.js"></script>
+     <script>
+var typed1 = new Typed('.typing', {
+  strings: ["Manage Your Passwords", "Save your passwords","Retrieve your passwords"],
+  typeSpeed: 30,
+  loop:true,
+  smartBackspace: true,
+  cursorChar: ''
+});
+     </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+.box{ box-sizing: border-box;
+  margin:20px 10px;
+  text-align: center;
+  width: auto;
+  padding: 20px;
+  border-radius:20px;
+  background: #f6f4f7;
+  box-shadow: 12px 12px 30px #949292, -12px -12px 30px #ffffff}
+  .box b{padding-bottom: 20px;}
+ .progress{margin: 0;}
+ ::-webkit-scrollbar{width: 5px;}
+ ::-webkit-scrollbar-thumb{background: linear-gradient(#662D8C , #ED1E79);width: 3px;}
+ ::-webkit-scrollbar-track{background: red;width: 3px;}
+ ::-webkit-scrollbar-button{width: 3px;}
+  
+ h1,h2,h3,h4{text-align: center;
+  
+  margin-top: 30px;
+  padding-top: 20px;
+
+ 
+  background: -webkit-linear-gradient(#c33764,#1d2671);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;}
+
+
+  
+  .data input{
+      padding: 12px 60px 12px 30px;
+      border: none;
+      outline: none;
+      margin-bottom: 20px;
+      border-radius: 50px;
+  }
+
+  @media screen and (min-width:700px){
+    .box{
+        margin-top: 17vh;
+    }
+}
+
+  @media screen and (max-width:500px){
+    .data input{
+        padding: 3px 15px 3px 3px;
+       
+    }
+    .tablee{overflow: auto;margin: 10px -10px;}
+    h1{font-size: 30px;}
+    .progress{margin: 0;}
+    .button{padding: 7px 20px;}
+}
+
+button.login{padding: 15px 80px;
+background: #4ba4de;
+color: #f1f1f1;
+border: none;
+outline: none;
+border-radius: 50px;
+margin-top: 20px;
+font-size: 20px}
+nav{background: #f50057;}
+
+.dropdown-content{z-index: 7676457824;}
+@media screen and (min-width:600px){
+    .brand-logo{margin-left: 30px;}
+}
+.tablee{overflow: auto;}
+@media screen and (max-width: 600px){
+    h1,h2,h3,h4{font-size: 23px;font-weight: 600;
+        background: -webkit-linear-gradient(#c33764,#1d2671);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;}
+  }
+  .homeloginbutton{padding: 10px;
+   margin: 10px;}
+
+   nav .sidenav{background:#000 ;}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!--materialze css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+      input::placeholder{color: rgb(160, 155, 155);}
+    </style>
+ 
+  </head>
+  <body>
+    <!--nav-->
+    <nav style="background:#f50057">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">pms</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/" class="btn waves-effect waves-light">Home</a></li>
+          <li><a href="/login" class="btn waves-effect waves-light">sign in</a></li>
+          <li><a href="/signup" class="btn waves-effect waves-light">Sign Up</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="/" class="btn waves-effect waves-light">Home</a></li>
+      <li><a href="/login" class="btn waves-effect waves-light">sign in</a></li>
+          <li><a href="/signup" class="btn waves-effect waves-light">Sign Up</a></li>
+          
+          
+    </ul>
+    <!--nav end-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-xs-auto col-sm-auto ml-auto mr-auto">
+          <%if(msg!=''){%>
+            <p class="text-success text-center">
+              <%=msg%>
+            </p>
+            <%}%>
+         <div class="box">
+           
+           <img src="/images/user.svg" height="80px" width="80px">
+            <form class="data" action="/login" method="POST">
+             <input type="text" required name="uname"  id="uname" placeholder="username"><br>
+             <input type="password"  required name='password'  id="password" placeholder="password"><br>
+                <button type="submit" class="login">login</button><br>
+                <footer>dont have an account ? <a href='/signup'>sign up</a></footer>
+            </form>
+        </div>
+        </div>
+        </div>
+      </div>
+      <script src="javascripts/nav.js"></script>
+      
+  </body>
+</html>

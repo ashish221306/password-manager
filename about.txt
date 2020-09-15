@@ -1,0 +1,9 @@
+Password managment system
+module-
+1.Register account
+2.Login Page
+3.Password category : Dynamic like- godady password,cpanel,wordpress,shopify,hostgator
+4.category managemant like edit and delete
+5.Add neW password page: form -> dropdown category ,project Name, project Details with username and password
+6.manage password like edit and delete
+7.view password popup

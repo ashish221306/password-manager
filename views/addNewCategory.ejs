@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('partial/head')%>
+  </head>
+  <body>
+    <!--nav-->
+    <%- include('partial/nav')%>
+    <!--nav end-->
+    <div class="container-fluid">
+        <h3 class="text-center">Add new Password Category</h3>
+      <div class="row">
+          
+        <div class="col-md-6 col-xs-auto col-sm-auto ml-auto mr-auto">
+        <!--form-->
+        <div class="row">
+            <form class="col s12" action="/add-new-category" method="POST">
+              <input type="hidden" name="userID" value="<%=userID%>">
+              <div class="row">
+                  <div class=" input-field col s6">
+                 
+                    <input type="text" id="category" name="passwordCategory" >
+                    <label for="category">new category</label>
+                    <%if(errors!=''){%>
+                      <p class=" text-danger"><%=errors.passwordCategory.msg%></p>
+                      <%}%>
+
+                      <%if(success!=''){%>
+                        <p class=" text-success"><%=success%></p>
+                        <%}%>
+                     </div>
+              </div>
+              <div class="row">
+                <div class="col s6">
+                 <input type="submit" class="btn" value="add category">
+                  </div>
+                  <div class="col s6">
+                    <a href="/passwordCategory">view all category</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+        <!--form end-->
+        </div>
+        </div>
+      </div>
+      <script src="javascripts/nav.js"></script>
+      <script>
+          
+  $(document).ready(function(){
+    $('select').formSelect();
+  });  
+           
+   </script>
+          
+  </body>
+  <script>
+      $(window).load(function() {
+    $('.progress').fadeOut('slow');
+ });
+  </script>
+</html>

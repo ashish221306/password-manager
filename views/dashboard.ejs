@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('partial/head')%>
+    <style>
+      a.dashlink{
+        display: block;
+      margin-bottom: 10px;}
+      h1,h2,h3,h4{text-align: center;
+  
+  margin-top: 30px;
+  padding-top: 20px;
+
+  
+  background: -webkit-linear-gradient(#c33764,#1d2671);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;}
+  @media screen and (max-width: 600px){
+    h1,h2,h3,h4{font-size: 23px;font-weight: 600;}
+  }
+    </style>
+  </head>
+  <body>
+    <!--nav-->
+    <%- include('partial/nav')%>
+   
+    <!--nav end-->
+    <div class="container-fluid">
+        <h3 class="text-center">User Dashboard</h3>
+      <div class="row">
+          
+        <div class="col-md-6 col-xs-auto col-sm-auto ml-auto mr-auto">
+          <!--dashboard links-->
+          <a  class='dropdown-trigger btn dashlink' href='#' data-target='dropdown4'>Password Category</a>
+                  <ul id='dropdown4' class='dropdown-content'>
+                    <li><a href="/add-new-category">add new Category </a></li>
+                    <li class="divider"></li>
+                    <li><a href="/passwordCategory">all Category </a></li>
+                  </ul>
+          <a  class='dropdown-trigger btn btn-lg dashlink' href='#' data-target='dropdown3'>password detail</a>
+          <ul id='dropdown3' class='dropdown-content'>
+            <li><a href="/add-new-password">add password</a></li>
+            <li class="divider"></li>
+        <li><a href="/view-all-password">view all password</a></li>
+            
+          </ul>
+
+          
+
+                  <%if(loginUser){%>
+                   <a href="#" class="btn  dashlink">Logged in as : <%=loginUser%></a>
+                   <a href="/logout" class="btn dashlink" dashlink>Logout</a>
+                    <%}%>
+        <!--dashboard links-->
+         
+        </div>
+        </div>
+      </div>
+      <script src="javascripts/nav.js"></script>
+      
+  </body>
+</html>
